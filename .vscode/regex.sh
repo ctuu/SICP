@@ -1,0 +1,1 @@
+sed -n '11,$p' | sed 's/^1 ]=> //g;/^$/d' | python3 .vscode/format.py | sed 's/^(/>>> (/g'
