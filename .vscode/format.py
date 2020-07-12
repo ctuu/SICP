@@ -10,7 +10,7 @@ afterDefine = False
 
 
 for line in sys.stdin:
-    
+
     if line.startswith(';Val'):
         if not afterDefine:
             print(line)
@@ -20,7 +20,7 @@ for line in sys.stdin:
         print('PARSE ERROR')
         print(line)
         exit(0)
-    
+
     if line.startswith(';Un'):
         print()
 
@@ -29,7 +29,7 @@ for line in sys.stdin:
 
     if line.startswith('End of'):
         exit(0)
-        
+
     if inDefine:
         if line.startswith('(define'):
             print('PARSE ERROR')
